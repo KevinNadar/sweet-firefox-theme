@@ -1,35 +1,22 @@
 <img src="icon.svg" alt="Firefox GNOME theme" width="128" align="left"/>
 
-# Firefox GNOME theme
-
-[![GitHub](https://img.shields.io/github/license/rafaelmardojai/firefox-gnome-theme.svg)](https://github.com/rafaelmardojai/firefox-gnome-theme/blob/master/LICENSE)
-[![Donate](https://img.shields.io/badge/PayPal-Donate-gray.svg?style=flat&logo=paypal&colorA=0071bb&logoColor=fff)](https://paypal.me/RafaelMardojaiCM)
-[![Liberapay](https://img.shields.io/liberapay/receives/rafaelmardojai.svg?logo=liberapay)](https://liberapay.com/rafaelmardojai/donate)
+# FireDragon SWEET theme
 
 <br>
 
-**A GNOME theme for Firefox**
+**A SWEET theme for FireDragon**
 
-This theme follows lastest GNOME Adwaita style.
+This theme follows lastest Sweet style.
 
 ![Screenshot of the theme](screenshot.png)
 
 ## Description
 
-This is a bunch of CSS code to make Firefox look closer to GNOME's native apps.
-
-### Getting in Touch
-
-Matrix room: [#firefox-gnome-theme:matrix.org](https://matrix.to/#/#firefox-gnome-theme:matrix.org)
+This is a bunch of CSS code to make FireDragon look closer to GNOME's native apps.
 
 ### Firefox versions support
 
-The `master` branch of this repo supports the current Firefox stable release `100`.
-
-Theme versions complatible with older Firefox releases are preserved as git tags. Use the `v78.1` tag for Firefox 78 ESR support.
-
-We also have the `beta` branch for fixes only aplicable to the current Firefox beta version.
-
+This `firedrgon` branch of this repo supports the current latest version of FireDragon stable release `101.0.1`.
 
 ## Installation
 
@@ -37,54 +24,46 @@ We also have the `beta` branch for fixes only aplicable to the current Firefox b
 1. Clone this repo and enter folder:
 	
 	```sh
-	git clone https://github.com/rafaelmardojai/firefox-gnome-theme && cd firefox-gnome-theme
-	```
-2. Checkout a git branch or tag if needed, otherwise use `master` and ignore this step. 
-	```sh
-	git checkout beta # Set beta branch 
-	git checkout v78.1 # Set v78.1 tag 
+	git clone  https://github.com/KevinNadar/sweet-firefox-theme.git && cd sweetfirefox-theme
+	# You're in the master branch by default
+	git checkout firedragon # Switch to firedragon branch 
 	```
 
 3. Run installation script
 
 	#### Auto install script
 	
-	This script will lookup Firefox profiles location and enable a theme variant for your GTK theme if it exists.
+	This script will lookup FireDragon profiles location and enable a theme variant for your GTK theme if it exists.
 	```sh
 	./scripts/auto-install.sh
 	```
 	#### Install script
 	```sh
 	./scripts/install.sh # Standard
-	./scripts/install.sh -f ~/.var/app/org.mozilla.firefox/.mozilla/firefox # Flatpak
+	./scripts/install.sh -f
 	```
 
 	##### Script options
-	- `-f <firefox_folder_path>` *optional*
+	- `-f <firedragon_folder_path>` *optional*
 		- Set custom Firefox folder path, for example `~/.mozilla/icecat/`.
-		- Default: `~/.mozilla/firefox/`
+		- Default: `~/.firedragon`
 
 	- `-p <profile_name>` *optional*
 		- Set custom profile name, for example `e0j6yb0p.default-nightly`.
-		- Default: All the profiles found in the firefox folder
-
-	- `-t <theme_name>` *optional*
-		- Set the colors used in the theme.
-		- Default: Adwaita.
-		- Options: `adwaita`, `maia`, `yaru`.
+		- Default: All the profiles found in the firedragon folder
 	
 ### One command curled script
 
 You can also install this theme with one command:
 
 ```sh
-curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash
+curl -s -o- https://raw.githubusercontent.com/KevinNadar/sweet-firefox-theme/firedragon/scripts/install-by-curl.sh | bash
 ```
 
 It will download the latest version of the theme and run the auto installation script for you.
 
 ### Manual installation
-1. Go to `about:support` in Firefox.
+1. Go to `about:support` in Firedragon.
 
 2. Application Basics > Profile Directory > Open Directory.
 
@@ -100,7 +79,7 @@ It will download the latest version of the theme and run the auto installation s
 5. Clone this repo to a subdirectory:
 
 	```sh
-	git clone https://github.com/rafaelmardojai/firefox-gnome-theme.git
+	git clone https://github.com/KevinNadar/sweet-firefox-theme.git
 	```
 
 6. Create single-line user CSS files if non-existent or empty (at least one line is needed for `sed`):
@@ -112,14 +91,14 @@ It will download the latest version of the theme and run the auto installation s
 7. Import this theme at the beginning of the CSS files (all `@import`s must come before any existing `@namespace` declarations):
 
 	```sh
-	sed -i '1s/^/@import "firefox-gnome-theme\/userChrome.css";\n/' userChrome.css
+	sed -i '1s/^/@import "sweet-firefox-theme\/userChrome.css";\n/' userChrome.css
 	```
 
 8. Symlink preferences file:
 
 	```sh
 	cd .. # Go back to the profile directory
-	ln -fs chrome/firefox-gnome-theme/configuration/user.js user.js
+	ln -fs chrome/sweet-firefox-theme/configuration/user.js user.js
 	```
 
 9. Restart Firefox.
@@ -128,14 +107,14 @@ It will download the latest version of the theme and run the auto installation s
 
 11. Be happy with your new gnomish Firefox.
 
-### Required Firefox preferences
+### Required Firedragon preferences
 We provide a **user.js** configuration file in `configuration/user.js` that enable some preferences required by this theme to work. 
 
 You should already have this file installed if you followed one of the installation methods, but in any case be sure this preferences are enabled under `about:config`:
 
 - `toolkit.legacyUserProfileCustomizations.stylesheets`
 
-	This preference is required to load the custom CSS in Firefox, otherwise the theme wouldn't work.
+	This preference is required to load the custom CSS in Firedragon, otherwise the theme wouldn't work.
 
 - `svg.context-properties.content.enabled`
 
@@ -143,16 +122,17 @@ You should already have this file installed if you followed one of the installat
 
 > For other non essential preferences checkout `configuration/user.js`.
 
-Also though is not obligatory, some weird issues might happen if you don't use the Firefox's default/system theme because the theme is never tested against the Firefox's light or dark theme.
+Also though is not obligatory, some weird issues might happen if you don't use the Firedragon's default/system theme because the theme is never tested against the Firefox's light or dark theme.
 
 ## Updating
 
 You can follow the installation script steps again to update the theme.
 
 ## Uninstalling
-1. Go to your profile folder. (Go to `about:support` in Firefox > Application Basics > Profile Directory > Open Directory)
+1. Go to your profile folder. (Go to `about:support` in Firedragon > Application Basics > Profile Directory > Open Directory)
 2. Remove `chrome` folder.
 
+<!--
 
 ## Enabling optional features
 Optional features can be enabled by creating new `boolean` preferences in `about:config`.
@@ -160,7 +140,7 @@ Optional features can be enabled by creating new `boolean` preferences in `about
 1. Go to the `about:config` page 
 2. Type the key of the feature you want to enable
 3. Set it as a `boolean` and click on the add button
-4. Restart Firefox
+4. Restart Firedragon
 
 ### Features
 
@@ -201,6 +181,7 @@ Optional features can be enabled by creating new `boolean` preferences in `about
 	Allow draging the window from headerbar buttons.
 
 	> **Note:** This feature is BUGGED. It can activate the button with unpleasant behavior.
+-->
 
 ## Known bugs
 
@@ -210,13 +191,13 @@ See upstream [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1408360).
 #### Wayland fix:
 1. Go to the `about:config` page
 2. Search for the `layers.acceleration.force-enabled` preference and set it to true.
-3. Now restart Firefox, and it should look good!
+3. Now restart Firedragon, and it should look good!
 
 #### X11 fix:
 1. Go to the `about:config` page 
 2. Type `mozilla.widget.use-argb-visuals`
 3. Set it as a `boolean` and click on the add button
-4. Now restart Firefox, and it should look good!
+4. Now restart Firedragon, and it should look good!
 
 ### Icons color broken with System icons
 Icons might appear black where they should be white on some systems. I have no idea why, but you can adjust them directly in the `system-icons.css` file, look for `--gnome-icons-hack-filter` & `--gnome-window-icons-hack-filter` vars and play with css filters.
@@ -247,7 +228,4 @@ Feel free to use any parts of my code to develop your own themes, I don't force
 any specific license on your code.
 
 ## Credits
-Developed by **[Rafael Mardojai CM](https://github.com/rafaelmardojai)** and [contributors](https://github.com/rafaelmardojai/firefox-gnome-theme/graphs/contributors). Based on **[Luna Kurame](https://github.com/lunakurame/firefox-gnome-theme)**'s original work.
-
-## Donate
-If you want to support development, consider donating via [PayPal](https://paypal.me/RafaelMardojaiCM). Also consider donating upstream, [Firefox](https://donate.mozilla.org/) & [GNOME](https://www.gnome.org/support-gnome/).
+This project is a fork of [firefox-gnome-theme](https://github.com/rafaelmardojai/firefox-gnome-theme) by **[Rafael Mardojai CM](https://github.com/rafaelmardojai)**. Based on **[Luna Kurame](https://github.com/lunakurame/firefox-gnome-theme)**'s original work.

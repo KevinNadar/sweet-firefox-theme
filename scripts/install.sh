@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 THEMEDIRECTORY=$(cd `dirname $0` && cd .. && pwd)
-FIREFOXFOLDER=~/.mozilla/firefox
+FIREFOXFOLDER=~/.firedragon
 PROFILENAME=""
 THEME=DEFAULT
 
