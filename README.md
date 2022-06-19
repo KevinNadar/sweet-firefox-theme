@@ -1,26 +1,18 @@
 <img src="icon.svg" alt="Firefox GNOME theme" width="128" align="left"/>
 
-# Firefox GNOME theme
-
-[![GitHub](https://img.shields.io/github/license/rafaelmardojai/firefox-gnome-theme.svg)](https://github.com/rafaelmardojai/firefox-gnome-theme/blob/master/LICENSE)
-[![Donate](https://img.shields.io/badge/PayPal-Donate-gray.svg?style=flat&logo=paypal&colorA=0071bb&logoColor=fff)](https://paypal.me/RafaelMardojaiCM)
-[![Liberapay](https://img.shields.io/liberapay/receives/rafaelmardojai.svg?logo=liberapay)](https://liberapay.com/rafaelmardojai/donate)
+# Firefox SWEET theme
 
 <br>
 
-**A GNOME theme for Firefox**
+**A SWEET theme for Firefox**
 
-This theme follows lastest GNOME Adwaita style.
+This theme follows lastest SWEET Adwaita style.
 
 ![Screenshot of the theme](screenshot.png)
 
 ## Description
 
 This is a bunch of CSS code to make Firefox look closer to GNOME's native apps.
-
-### Getting in Touch
-
-Matrix room: [#firefox-gnome-theme:matrix.org](https://matrix.to/#/#firefox-gnome-theme:matrix.org)
 
 ### Firefox versions support
 
@@ -37,7 +29,7 @@ We also have the `beta` branch for fixes only aplicable to the current Firefox b
 1. Clone this repo and enter folder:
 	
 	```sh
-	git clone https://github.com/rafaelmardojai/firefox-gnome-theme && cd firefox-gnome-theme
+	git clone https://github.com/KevinNadar/sweet-firefox-theme && cd sweet-firefox-theme
 	```
 2. Checkout a git branch or tag if needed, otherwise use `master` and ignore this step. 
 	```sh
@@ -67,18 +59,13 @@ We also have the `beta` branch for fixes only aplicable to the current Firefox b
 	- `-p <profile_name>` *optional*
 		- Set custom profile name, for example `e0j6yb0p.default-nightly`.
 		- Default: All the profiles found in the firefox folder
-
-	- `-t <theme_name>` *optional*
-		- Set the colors used in the theme.
-		- Default: Adwaita.
-		- Options: `adwaita`, `maia`, `yaru`.
 	
 ### One command curled script
 
 You can also install this theme with one command:
 
 ```sh
-curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash
+curl -s -o- https://raw.githubusercontent.com/KevinNadar/sweet-firefox-theme/master/scripts/install-by-curl.sh | bash
 ```
 
 It will download the latest version of the theme and run the auto installation script for you.
@@ -100,7 +87,7 @@ It will download the latest version of the theme and run the auto installation s
 5. Clone this repo to a subdirectory:
 
 	```sh
-	git clone https://github.com/rafaelmardojai/firefox-gnome-theme.git
+	git clone https://github.com/KevinNadar/sweet-firefox-theme.git
 	```
 
 6. Create single-line user CSS files if non-existent or empty (at least one line is needed for `sed`):
@@ -112,14 +99,14 @@ It will download the latest version of the theme and run the auto installation s
 7. Import this theme at the beginning of the CSS files (all `@import`s must come before any existing `@namespace` declarations):
 
 	```sh
-	sed -i '1s/^/@import "firefox-gnome-theme\/userChrome.css";\n/' userChrome.css
+	sed -i '1s/^/@import "sweet-firefox-theme\/userChrome.css";\n/' userChrome.css
 	```
 
 8. Symlink preferences file:
 
 	```sh
 	cd .. # Go back to the profile directory
-	ln -fs chrome/firefox-gnome-theme/configuration/user.js user.js
+	ln -fs chrome/sweet-firefox-theme/configuration/user.js user.js
 	```
 
 9. Restart Firefox.
@@ -153,6 +140,7 @@ You can follow the installation script steps again to update the theme.
 1. Go to your profile folder. (Go to `about:support` in Firefox > Application Basics > Profile Directory > Open Directory)
 2. Remove `chrome` folder.
 
+<!--
 
 ## Enabling optional features
 Optional features can be enabled by creating new `boolean` preferences in `about:config`.
@@ -202,6 +190,8 @@ Optional features can be enabled by creating new `boolean` preferences in `about
 
 	> **Note:** This feature is BUGGED. It can activate the button with unpleasant behavior.
 
+ -->
+
 ## Known bugs
 
 ### CSD have sharp corners
@@ -247,7 +237,4 @@ Feel free to use any parts of my code to develop your own themes, I don't force
 any specific license on your code.
 
 ## Credits
-Developed by **[Rafael Mardojai CM](https://github.com/rafaelmardojai)** and [contributors](https://github.com/rafaelmardojai/firefox-gnome-theme/graphs/contributors). Based on **[Luna Kurame](https://github.com/lunakurame/firefox-gnome-theme)**'s original work.
-
-## Donate
-If you want to support development, consider donating via [PayPal](https://paypal.me/RafaelMardojaiCM). Also consider donating upstream, [Firefox](https://donate.mozilla.org/) & [GNOME](https://www.gnome.org/support-gnome/).
+This project is a fork of [firefox-gnome-theme](https://github.com/rafaelmardojai/firefox-gnome-theme) by **[Rafael Mardojai CM](https://github.com/rafaelmardojai)**. Based on **[Luna Kurame](https://github.com/lunakurame/firefox-gnome-theme)**'s original work.
