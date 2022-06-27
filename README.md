@@ -228,4 +228,6 @@ Feel free to use any parts of my code to develop your own themes, I don't force
 any specific license on your code.
 
 ## Credits
-This project is a fork of [firefox-gnome-theme](https://github.com/rafaelmardojai/firefox-gnome-theme) by **[Rafael Mardojai CM](https://github.com/rafaelmardojai)**. Based on **[Luna Kurame](https://github.com/lunakurame/firefox-gnome-theme)**'s original work.
+This project is a fork of [firefox-gnome-theme](https://github.com/rafaelmardojai/firefox-gnome-theme) by **[Rafael Mardojai CM](https://github.com/rafaelmardojai)**. Based on **[Luna Kurame](https://github.com/lunakurame/firefox-gnome-theme)**'s original work. This project contains the **sweet** `/theme` directory from [this repo](https://github.com/EliverLara/firefox-sweet-theme).
+
+<!-- TODO: modify link -->
