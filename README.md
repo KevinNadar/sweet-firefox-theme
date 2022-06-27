@@ -4,7 +4,7 @@
 
 <br>
 
-**A SWEET theme for Firefox**
+**A SWEET theme for Firefox**. *(Also compatible with FireDragon)*
 
 This theme follows lastest SWEET Adwaita style.
 
@@ -24,6 +24,9 @@ We also have the `beta` branch for fixes only aplicable to the current Firefox b
 
 
 ## Installation
+
+### For FireDragon
+Check out the `firedragon` branch of this repo for installing the theme for **FireDragon**. *For **FireFox**, continue reading this `README`.*
 
 ### Installation script
 1. Clone this repo and enter folder:
@@ -237,4 +240,4 @@ Feel free to use any parts of my code to develop your own themes, I don't force
 any specific license on your code.
 
 ## Credits
-This project is a fork of [firefox-gnome-theme](https://github.com/rafaelmardojai/firefox-gnome-theme) by **[Rafael Mardojai CM](https://github.com/rafaelmardojai)**. Based on **[Luna Kurame](https://github.com/lunakurame/firefox-gnome-theme)**'s original work.
+This project is a fork of [firefox-gnome-theme](https://github.com/rafaelmardojai/firefox-gnome-theme) by **[Rafael Mardojai CM](https://github.com/rafaelmardojai)**. Based on **[Luna Kurame](https://github.com/lunakurame/firefox-gnome-theme)**'s original work. This project contains the **sweet** `/theme` directory from [this repo](https://github.com/EliverLara/firefox-sweet-theme).
